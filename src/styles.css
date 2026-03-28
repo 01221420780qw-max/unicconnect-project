@@ -1,0 +1,40 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #02010a;
+  font-family: "Inter", sans-serif;
+}
+.txt-flow {
+  background: linear-gradient(to right, #00d2ff, #9d50bb, #ff00c1, #00d2ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: flow 3s linear infinite;
+  background-size: 200% auto;
+}
+@keyframes flow {
+  to {
+    background-position: 200% center;
+  }
+}
+.neon-shield {
+  border: 1px solid rgba(0, 210, 255, 0.2);
+  box-shadow: 0 0 40px rgba(0, 210, 255, 0.1);
+}
+.orb {
+  position: absolute;
+  filter: blur(80px);
+  z-index: 0;
+  animation: move 6s infinite alternate ease-in-out;
+  border-radius: 50%;
+}
+@keyframes move {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+  to {
+    transform: scale(1.1) translate(5%, 5%);
+  }
+}
